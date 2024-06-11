@@ -8,8 +8,6 @@ import ThemeContext from '../Provider/Provider'
 
 const Home = ({jobTitle}) => {
 
-   
-
     return(
        <>
        <ThemeContext.Provider value='hiii'>

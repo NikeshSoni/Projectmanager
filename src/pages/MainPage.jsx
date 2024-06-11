@@ -1,11 +1,10 @@
-import { useContext } from 'react';
+import { useContext , useState} from 'react';
 import { useParams } from 'react-router-dom';
 import EmployerDashBord from '../components/EmployerDashboard';
-import MainForm from '../components/MainForm';
-import MainPreview from '../components/MainPreview';
 import { UserContext } from '../Provider/UserContext';
-// import {id}
+
 const MainPage = () => {
+
     const userForm = useContext(UserContext);
     const { id } = useParams();
     const filterJob = userForm.user.filter((item) => {
@@ -16,14 +15,9 @@ const MainPage = () => {
     console.log("33333333333", filterJob);
     return (
         <div className='main'>
-            {/* {filterJob.map( (items) => {
-                 return(
-                    <>
-                        {items.jobtitle}
-                    </>
-                 )
-            })} */}
-            <h1>I am main page and you selected {id}</h1>
+            <div className='text-center my-3'>
+                 <h1 className='heading'> This is  {id} Page..</h1>
+            </div>
             <EmployerDashBord data={filterJob} />
         </div>
     )

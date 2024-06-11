@@ -7,10 +7,12 @@ import Preview from '../pages/Preview'
 const  JobPost = ({title}) => {
     const userId = title.toLowerCase().replace(/ +/g,'-');
     return(
-        <>
-             {/* <Delete /> */}
+
+       <>
+        <button className="w-100"> 
             <Link className="text-decoration-none" to={`/preview/${userId}`}>{title}</Link>
-        </>
+        </button>
+       </>
     )
 }
 
